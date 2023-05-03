@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Time Converter</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		p {
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body class="bg-dark">
+	<br><br><br><br><br><br>
+	<div class="row">
+		<div class="col-xl-1"></div>
+		<div class="col-xl-10 bg-light" style="padding: 20px;">
+			<center>
+				<h1>Time Converter</h1><br>
+				<h2>Days to Seconds/Minutes/Hours</h2><br>
+				<input type="text" id="id1" placeholder="Days"><br>
+				<input type="submit" value="Convert to Seconds" onclick="myFunction1()">
+				<p id="ans"></p>
+				<input type="submit" value="Convert to Minutes" onclick="myFunction2()">
+				<p id="ans1"></p>
+				<input type="submit" value="Convert to Hours" onclick="myFunction3()">
+				<p id="ans2"></p>
+				<script>
+		function myFunction1() {
+			var num1 = document.getElementById('id1').value;
+			var secs = num1 * 86400;
+			document.getElementById('ans').innerHTML = secs + " secs";
+		}
+	</script>
+	<script>
+		function myFunction2() {
+			var num1 = document.getElementById('id1').value;
+			var mins = num1 * 1440;
+			document.getElementById('ans1').innerHTML = mins + " mins";
+		}
+	</script>
+	<script>
+		function myFunction3() {
+			var num1 = document.getElementById('id1').value;
+			var hrs = num1 * 24;
+			document.getElementById('ans2').innerHTML = hrs + " hrs";
+		}
+	</script>
+			</center>
+</body>
+</html>
